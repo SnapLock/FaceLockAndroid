@@ -7,6 +7,7 @@
     tools:context="us.facelock.MainActivity">
 
     <ImageView
+        android:id="@+id/facelock_icon"
         android:layout_width="wrap_content"
         android:layout_height="200dp"
         android:paddingTop="10dp"
@@ -16,11 +17,11 @@
         android:id="@+id/welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to Facelock"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/welcome"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/facelock_icon"
+        android:padding="30dp"/>
 
     <Button
         android:id="@+id/login"
@@ -29,7 +30,8 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/welcome"
-        android:text="LOGIN"/>
+        android:textColor="@color/black"
+        android:text="@string/login"/>
 
     <Button
         android:id="@+id/signup"
@@ -38,14 +40,18 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/login"
-        android:text="SIGNUP"/>
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:text="@string/signup"/>
 
     <android.support.v7.widget.SwitchCompat
-        android:id="@+id/toggle_mode"
+        android:id="@+id/toggle_theme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/signup"/>
+        app:layout_constraintTop_toBottomOf="@id/signup"
+        android:layout_marginTop="40dp"
+        android:theme="@style/switchLightDark"/>
 
 </android.support.constraint.ConstraintLayout>
